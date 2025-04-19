@@ -1,81 +1,314 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alex | Full Stack Developer</title>
-  <meta name="description" content="Alex's Portfolio - Full Stack Developer and DevOps Enthusiast" />
-  <meta property="og:title" content="Alex's Portfolio" />
-  <meta property="og:description" content="Passionate about Java, Spring Boot, Docker, and more." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#2563EB" />
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Lord of The Rings Trilogy (2001-2003)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background: linear-gradient(135deg, #333, #555);
+        color: white;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      header h1 {
+        text-align: center;
+        margin: 0;
+        font-family: 'Cinzel', serif;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      .content {
+        padding: 20px;
+        max-width: 1200px;
+        margin: auto;
+        background-color: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+      .section-title {
+        color: #333;
+        font-size: 1.8em;
+        border-bottom: 2px solid #333;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+        font-family: 'Cinzel', serif;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      .movie-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      .movie-list li {
+        padding: 10px 0;
+        font-size: 1.2em;
+        border-bottom: 1px solid #ddd;
+        transition: background-color 0.3s ease;
+      }
+      .movie-list li:hover {
+        background-color: #f9f9f9;
+      }
+      .movie-list li:last-child {
+        border-bottom: none;
+      }
+      .quotes {
+        background: linear-gradient(135deg, #eee, #ddd);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .quotes blockquote {
+        margin: 15px 0;
+        padding-left: 20px;
+        border-left: 5px solid #333;
+        font-style: italic;
+        color: #555;
+      }
+      footer {
+        text-align: center;
+        padding: 20px 0;
+        background: linear-gradient(135deg, #333, #555);
+        color: white;
+        margin-top: 20px;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .back-to-top {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      .back-to-top:hover {
+        color: #555;
+      }
+      .main-image {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      .character-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .character-card {
+        flex: 1 1 calc(33.333% - 40px);
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .character-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      }
+      .character-card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+      .character-card:hover img {
+        transform: scale(1.05);
+      }
+      .character-card h4 {
+        margin: 15px 0 5px;
+        font-size: 1.3em;
+        font-family: 'Cinzel', serif;
+        color: #333;
+      }
+      .character-card p {
+        margin: 0;
+        font-size: 0.9em;
+        color: #555;
+      }
+      .interactive-section {
+        background: linear-gradient(135deg, #f9f9f9, #eee);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .interactive-section h3 {
+        margin-top: 0;
+        font-family: 'Cinzel', serif;
+        color: #333;
+      }
+      .interactive-section label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+        color: #555;
+      }
+      .interactive-section input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1em;
+      }
+      .interactive-section button {
+        padding: 10px 20px;
+        background: linear-gradient(135deg, #333, #555);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background 0.3s ease, transform 0.3s ease;
+      }
+      .interactive-section button:hover {
+        background: linear-gradient(135deg, #555, #777);
+        transform: translateY(-2px);
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .character-card {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+    </style>
+  </head>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <body>
+    <header>
+      <h1>The Lord of The Rings Trilogy</h1>
+    </header>
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+    <div class="content" id="topOfPage">
+      <center>
+        <img src="https://s3-ap-southeast-2.amazonaws.com/yc.cldmlk.com/ece0d1e0-01b1-4f19-a184-8f4e860f7277/uploads/1709892042287_9640676.jpg" 
+             alt="The Lord of the Rings" class="main-image" />
+      </center>
 
-  <!-- Navbar -->
-  <nav class="bg-white shadow-md fixed w-full z-10">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-600">MyPortfolio</h1>
-      <ul class="flex space-x-6">
-        <li><a href="#home" class="hover:text-blue-600">Home</a></li>
-        <li><a href="#about" class="hover:text-blue-600">About</a></li>
-        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+      <p>The Lord of the Rings is a trilogy of epic fantasy adventure films directed by Peter Jackson, based on the novel <em>The Lord of the Rings</em> by J. R. R. Tolkien. The films are titled identically to the three volumes of the novel: 
+        <strong>The Fellowship of the Ring</strong> (2001), <strong>The Two Towers</strong> (2002), and <strong>The Return of the King</strong> (2003). 
+        Produced by New Line Cinema, the trilogy features an ensemble cast including Elijah Wood, Ian McKellen, Liv Tyler, Viggo Mortensen, and more.</p>
+
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/cnf4h5HT4dc" frameborder="0" allowfullscreen title="Lord of the Rings Trailer"></iframe>
+
+      <h3 class="section-title">List of Films</h3>
+      <ul class="movie-list">
+        <li><strong>The Fellowship of the Ring</strong> (2001) – The first film introduces the quest to destroy the One Ring.</li>
+        <li><strong>The Two Towers</strong> (2002) – The story continues as the members of the Fellowship fight the forces of Sauron.</li>
+        <li><strong>The Return of the King</strong> (2003) – The final battle to destroy the One Ring and the forces of evil in Middle-earth.</li>
       </ul>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex items-center justify-center pt-24 text-center bg-gradient-to-b from-blue-50 to-white">
-    <div>
-      <h2 class="text-4xl font-bold mb-4">Hey, I'm Alex 👋</h2>
-      <p class="text-lg text-gray-600 mb-6 max-w-xl mx-auto">
-        A passionate developer building modern web applications and digital experiences.
-      </p>
-      <div class="flex justify-center space-x-6 mt-4">
-        <a href="https://github.com/yourusername" target="_blank" class="text-blue-500 text-2xl hover:text-blue-700"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-blue-500 text-2xl hover:text-blue-700"><i class="fab fa-linkedin"></i></a>
-        <a href="https://twitter.com/yourusername" target="_blank" class="text-blue-500 text-2xl hover:text-blue-700"><i class="fab fa-twitter"></i></a>
+      <h3 class="section-title">Main Characters</h3>
+      <div class="character-gallery">
+        <div class="character-card">
+          <img src="https://cdn.moviefone.com/wp-content/uploads/2024/09/lotr-return-of-the-king-102.jpg?q=80" alt="Gandalf">
+          <h4>Gandalf</h4>
+          <p>The wise wizard who guides the Fellowship.</p>
+        </div>
+        <div class="character-card">
+          <img src="https://upload.wikimedia.org/wikipedia/en/4/4e/Elijah_Wood_as_Frodo_Baggins.png" alt="Frodo Baggins">
+          <h4>Frodo Baggins</h4>
+          <p>The hobbit tasked with destroying the One Ring.</p>
+        </div>
+        <div class="character-card">
+          <img src="https://www.looper.com/img/gallery/what-happened-to-sam-after-lord-of-the-rings-ended/sam-has-an-enormous-family-1696576190.webp" alt="Samwise Gamgee">
+          <h4>Samwise Gamgee</h4>
+          <p>Frodo's loyal friend and companion.</p>
+        </div>
+        <div class="character-card">
+          <img src="https://upload.wikimedia.org/wikipedia/en/3/35/Aragorn300ppx.png" alt="Aragorn">
+          <h4>Aragorn</h4>
+          <p>The exiled heir to the throne of Gondor.</p>
+        </div>
+        <div class="character-card">
+          <img src="https://images3.alphacoders.com/161/161187.jpg" alt="Arwen">
+          <h4>Arwen</h4>
+          <p>The elven princess who chose a mortal life for love, forsaking her immortality and position in the Undying Lands. Arwen and Aragorn's love led to her death a year after his, in Lórien where they first committed to each other.</p>
+        </div>
+        <div class="character-card">
+          <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/05/gollum-in-the-lord-of-the-rings.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5" alt="Gollum">
+          <h4>Gollum</h4>
+          <p>A creature corrupted by the One Ring.</p>
+        </div>
       </div>
+
+      <h3 class="section-title">Notable Quotes</h3>
+      <div class="quotes">
+        <blockquote>
+          "Even the smallest person can change the course of the future." — Galadriel
+        </blockquote>
+        <blockquote>
+          "There is some good in this world, Mr. Frodo, and it's worth fighting for." — Samwise Gamgee
+        </blockquote>
+        <blockquote>
+          "One does not simply walk into Mordor." — Boromir
+        </blockquote>
+        <blockquote>
+          "All we have to decide is what to do with the time that is given to us." — Gandalf
+        </blockquote>
+        <blockquote>
+          "I am no man!" — Éowyn
+        </blockquote>
+      </div>
+
+      <h3 class="section-title">Behind-the-Scenes Trivia</h3>
+      <ul class="movie-list">
+        <li>The trilogy was filmed entirely in New Zealand, showcasing its stunning landscapes.</li>
+        <li>Peter Jackson used a combination of practical effects and CGI to bring the world of Middle-earth to life.</li>
+        <li>The actors spent extensive time in New Zealand to get into character, with Viggo Mortensen even learning sword fighting and horse riding for his role as Aragorn.</li>
+        <li>Andy Serkis’s performance as Gollum was groundbreaking, using motion capture technology that would later become a standard for CGI characters in films.</li>
+        <li>The production team built over 350 miniature sets for the films, including the entire city of Minas Tirith.</li>
+        <li>The trilogy won a total of 17 Academy Awards, with <em>The Return of the King</em> winning all 11 of its nominations, including Best Picture.</li>
+      </ul>
+
+      <h3 class="section-title">Impact & Legacy</h3>
+      <p>The Lord of the Rings trilogy is widely regarded as one of the greatest film series of all time. Its combination of practical effects, CGI, and storytelling earned it numerous accolades, including 17 Academy Awards. The trilogy has influenced pop culture, inspiring video games, TV series, and even a prequel trilogy, <em>The Hobbit</em>. The depth of J.R.R. Tolkien’s world continues to resonate with audiences today, cementing the films as a cornerstone of fantasy cinema.</p>
+
+      <div class="interactive-section">
+        <h3>Test Your Knowledge</h3>
+        <label for="question1">Who is the director of The Lord of the Rings trilogy?</label>
+        <input type="text" id="question1" placeholder="Your answer...">
+        <label for="question2">Which character said, 'One does not simply walk into Mordor'?</label>
+        <input type="text" id="question2" placeholder="Your answer...">
+        <button onclick="checkAnswers()">Check Answers</button>
+      </div>
+
+      <footer>
+        <p>Dedicated to all <strong>The Lord of The Rings</strong>&reg; fans</p>
+      </footer>
+
+      <p class="back-to-top"><a href="#topOfPage">Back to Top</a></p>
     </div>
-  </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto text-center px-4">
-      <h3 class="text-3xl font-semibold mb-4">About Me</h3>
-      <p class="text-gray-600">
-        I'm a full-stack developer with experience in Java, Spring Boot, and DevOps tools like Docker, Kubernetes, Jenkins, and Terraform. I enjoy creating scalable backend systems and sleek front-end interfaces.
-      </p>
-    </div>
-  </section>
+    <script>
+      function checkAnswers() {
+        const answer1 = document.getElementById('question1').value.trim().toLowerCase();
+        const answer2 = document.getElementById('question2').value.trim().toLowerCase();
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-gray-100">
-    <div class="max-w-xl mx-auto px-4">
-      <h3 class="text-3xl font-semibold text-center mb-6">Contact Me</h3>
-      <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4 bg-white p-6 rounded-xl shadow-md">
-        <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
-        <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
-        <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
-        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-white text-center py-6 mt-10 text-sm text-gray-500">
-    &copy; 2025 Alex Dev | All rights reserved
-  </footer>
-
-</body>
+        if (answer1 === "peter jackson" && answer2 === "boromir") {
+          alert("Correct! You know your LOTR trivia!");
+        } else {
+          alert("Some answers are incorrect. Try again!");
+        }
+      }
+    </script>
+  </body>
 </html>
-
